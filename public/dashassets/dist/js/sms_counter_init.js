@@ -1,0 +1,31 @@
+$(document).ready(function () {
+    $('.dailySms').countSms('.dailySms-counter');
+    $('.weeklySms').countSms('.weeklySms-counter');
+    $('.monthlySms').countSms('.monthlySms-counter');
+    $('.weeklySms').countSms('.weeklySms-counter');
+    $('.yearlySms').countSms('.yearlySms-counter');
+    $('.followSms').countSms('.followSms-counter');
+    $('.package_rejectSms').countSms('.package_rejectSms-counter');
+    $('.package_aceptSms').countSms('.package_aceptSms-counter');
+    $('.package_submitSms').countSms('.package_submitSms-counter');
+    $('.doc_verifySms').countSms('.doc_verifySms-counter');
+    $('.doc_acceptSms').countSms('.doc_acceptSms-counter');
+    $('.doc_submitSms').countSms('.doc_submitSms-counter');
+    $('.pass_resetSms').countSms('.pass_resetSms-counter');
+    $('.user_bonusSms').countSms('.user_bonusSms-counter');
+    $('.withdrawlSms').countSms('.withdrawlSms-counter');
+    $('.withdrawlrejectSms').countSms('.withdrawlrejectSms-counter');
+    $('.withdrawlsentSms').countSms('.withdrawlsentSms-counter');
+    $('.ad_republishSms').countSms('.ad_republishSms-counter');
+    $('.ad_republishSms_ready').countSms('.ad_republishSms_ready-counter');
+    $('.ad_viewsSms').countSms('.ad_viewsSms-counter');
+    $('.ad_likeSms').countSms('.ad_likeSms-counter');
+    $('.ad_expireSms').countSms('.ad_expireSms-counter');
+    $('.chatSms').countSms('.chatSms-counter');
+    $('.user_regByAdminSms').countSms('.user_regByAdminSms-counter');
+    $('.phoneVersms').countSms('.phoneVersms-counter');
+    $('.ad_sms').countSms('.ad_sms-counter');
+    $('.reg_sms').countSms('.reg_sms-counter');
+    $('.delAdSms').countSms('.delAd-counter');
+
+});
