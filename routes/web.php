@@ -53,6 +53,7 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function() {
 	Route::match(['get','post'],'about-us', [AboutSectionController::class,'about'])->name('about.us');
 	Route::resource('services', ServiceController::class);
 	Route::resource('products-and-services', ServiceItemController::class);
+	Route::post('/items/sort', [ServiceItemController::class,'sort'])->name('items.sort');
 	Route::match(['get','post'],'/services-heading', [ServiceController::class,'service_heading'])->name('service.heading');
 	Route::resource('banner', BannerSectionController::class);
 	Route::resource('portfolio', PortfolioSectionController::class);

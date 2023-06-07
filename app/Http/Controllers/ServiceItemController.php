@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Option;
 use App\Models\Service;
 use App\Models\ServiceItem;
 use Illuminate\Http\Request;
@@ -29,7 +30,9 @@ class ServiceItemController extends Controller
     {	
 		
         $item = ServiceItem::latest()->paginate(6);
-        return view('admin.service-items.index',compact('item'))
+		  $order = Option::where('option_key', 'service')->first();
+        $order =(isset($order->id))?json_decode($order->option_value,true):array();
+        return view('admin.service-items.index',compact('item','order'))
             ->with('i', (request()->input('page', 1) - 1) * 6);
     }
     
@@ -128,4 +131,25 @@ class ServiceItemController extends Controller
         return redirect()->route('products-and-services.index')
                         ->with('success','Record deleted successfully');
     }
+
+
+		public function sort(Request $request)
+		{
+			$order = $request->input('order');
+			// dd($order);
+			// foreach ($order as $index => $itemId) {
+			// 		$item = Option::find($itemId);
+			// 		$item->option_value = $index + 1;
+			// 		$item->save();
+			// }
+
+			$sideBar=Option::updateOrCreate(
+				['option_key' => 'service'],
+				[
+					 'option_key' => 'service',
+					 'option_value' => json_encode($order)
+				]);
+
+			return response()->json(['success' => true]);
+		}
 }

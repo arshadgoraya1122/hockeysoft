@@ -87,7 +87,7 @@
 										<input type="file" name="logo1" id="imageUpload" accept="image/*" class="form-control-file">
 									</div>
 										<div class="form-group">
-											<img src="{{asset($header->logo1)}}" id="previewImage" alt="Preview" style="max-width: 200px; @if(empty($header->logo1)) display: none; @endif">
+											<img src="{{asset($header->logo1 ?? '')}}" id="previewImage" alt="Preview" style="max-width: 200px; @if(empty($header->logo1)) display: none; @endif">
 										</div>
 										<div class="form-group">
 											<button type="button" onclick="cancelImage()" class="btn btn-danger">Cancel</button>
@@ -100,7 +100,7 @@
 										<input type="file" name="logo2" id="imageUpload1" accept="image/*" class="form-control-file">
 									</div>
 										<div class="form-group">
-											<img src="{{asset($header->logo2)}}" id="previewImage1" alt="Preview" style="max-width: 200px;@if(empty($header->logo2)) display: none; @endif">
+											<img src="{{asset($header->logo2 ?? '')}}" id="previewImage1" alt="Preview" style="max-width: 200px;@if(empty($header->logo2)) display: none; @endif">
 										</div>
 										<div class="form-group">
 											<button type="button" onclick="cancelImage1()" class="btn btn-danger">Cancel</button>
@@ -120,7 +120,7 @@
 									<input type="file" name="background_image" id="imageUpload2" accept="image/*" class="form-control-file">
 								</div>
 									<div class="form-group">
-										<img src="{{asset($header->background_image)}}" id="previewImage2" alt="Preview" style="max-width: 200px; @if(empty($header->background_image)) display: none; @endif">
+										<img src="{{asset($header->background_image ?? '')}}" id="previewImage2" alt="Preview" style="max-width: 200px; @if(empty($header->background_image)) display: none; @endif">
 									</div>
 									<div class="form-group">
 										<button type="button" onclick="cancelImage2()" class="btn btn-danger">Cancel</button>

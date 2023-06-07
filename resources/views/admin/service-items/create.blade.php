@@ -24,7 +24,7 @@
             <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h6 class="fs-17 font-weight-600 mb-0">Products & Services</h6>
+                        <h6 class="fs-17 font-weight-600 mb-0">Products and Services</h6>
                     </div>
 						  {{-- <div class="text-right">
 									<a class="btn btn-success" href="{{ route('item.index') }}">Back</a>

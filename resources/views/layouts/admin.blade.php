@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ config('app.name') }} - Admin Deshboard">
     <meta name="author" content="{{ config('app.name') }}">
+	 <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }} - Admin Deshboard</title>
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('dashassets/dist/img/favicon.png') }}">
@@ -27,7 +28,11 @@
     @yield('styles')
     <link href="{{ asset('dashassets/dist/css/style.css' ) }}" rel="stylesheet">
     <link href="{{ asset('dashassets/dist/css/custom.css' ) }}" rel="stylesheet">
-  
+	 <style>
+		.pointer-cursor {
+			 cursor: pointer;
+		}
+  </style>
 
 	
 </head>
@@ -317,17 +322,18 @@
     </div>
     <!--/.wrapper-->
     <!--Global script(used by all pages)-->
-    <script src="{{ asset('dashassets/plugins/jQuery/jquery-3.4.1.min.js') }}" defer></script>
+    <script src="{{ asset('dashassets/plugins/jQuery/jquery-3.4.1.min.js') }}" ></script>
     <script src="{{ asset('dashassets/dist/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('dashassets/plugins/bootstrap/js/bootstrap.min.js') }}" defer></script>
-    <script src="{{ asset('dashassets/plugins/metisMenu/metisMenu.min.js') }}" defer></script>
     <script src="{{ asset('dashassets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}" defer></script>
+
+    <script src="{{ asset('dashassets/plugins/metisMenu/metisMenu.min.js') }}" defer></script>
     <!-- Third Party Scripts(used by this page)-->
-    <script src="{{ asset('dashassets/plugins/chartJs/Chart.min.js') }}" defer></script>
+   {{--  <script src="{{ asset('dashassets/plugins/chartJs/Chart.min.js') }}" defer></script>
     <script src="{{ asset('dashassets/plugins/sparkline/sparkline.min.js') }}" defer></script>
     <script src="{{ asset('dashassets/plugins/emojionearea/dist/emojionearea.min.js') }}" defer></script>
     <script src="{{ asset('dashassets/plugins/datatables/dataTables.min.js') }}" defer></script>
-    <script src="{{ asset('dashassets/plugins/datatables/dataTables.bootstrap4.min.js') }}" defer></script>
+    <script src="{{ asset('dashassets/plugins/datatables/dataTables.bootstrap4.min.js') }}" defer></script> --}}
     <!--Page Active Scripts(used by this page)-->
 
     <!--Page Scripts(used by all page)-->
