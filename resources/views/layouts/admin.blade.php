@@ -84,7 +84,7 @@
                         <nav class="sidebar-nav">
                             <ul class="metismenu">
                                 <li class="nav-label">Main Menu</li>
-                                <li class="mm-active"><a href="{{ route('dashboard') }}">
+                                <li class="{{ Request::segment(2)=='dashboard' ? 'mm-active' : '' }}"><a href="{{ route('dashboard') }}">
                                     <i class="typcn typcn-home-outline mr-2"></i>Dashboard</a>
                                 </li>
                                 {{-- <li class=""><a href="{{ route('contacts.index') }}">
@@ -110,7 +110,13 @@
                                         <li><a href="{{ route('submenus.index') }}">Manage Menus</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="{{ Request::segment(2)=='header' ? 'mm-active' : '' }} ||
+										  <style>
+											.active-links{
+												color: #dcd016 !important;
+											}
+										  </style>
+                                <li class="
+										  		{{ Request::segment(2)=='header' ? 'mm-active' : '' }} ||
 												{{ Request::segment(2)=='about-us' ? 'mm-active' : '' }} ||
 												{{ Request::segment(2)=='products-and-services' ? 'mm-active' : '' }} ||
 												{{ Request::segment(2)=='banner' ? 'mm-active' : '' }} ||
@@ -144,17 +150,17 @@
 															 Home
 														</a>
 														<ul class="nav-second-level">
-															 <li><a href="{{ route('header') }}">Header</a></li>
-															 <li><a href="{{ route('about.us') }}">About Us</a></li>
-															 <li><a href="{{ route('products-and-services.index') }}">Products & Services</a></li>
-															 <li><a href="{{ route('banner.index') }}">Banner</a></li>
-															 <li><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
-															 <li><a href="{{ route('testimonial.index') }}">Testimonial</a></li>
-															 <li><a href="{{ route('hire.index') }}">Hire Section</a></li>
-															 <li><a href="{{ route('newsletter.index') }}">Newsletter</a></li>
-															 <li><a href="{{ route('footerlink.index') }}">Footer Links</a></li>
-															 <li><a href="{{ route('general.index') }}">General</a></li>
-															 <li><a href="{{ route('submenus.index') }}">Manage Menus</a></li>
+															 <li><a href="{{ route('header') }}" class="{{ Request::segment(2)=='header' ? 'active-links' : '' }}">Header</a></li>
+															 <li><a class="{{ Request::segment(2)=='about-us' ? 'active-links' : '' }}" href="{{ route('about.us') }}">About Us</a></li>
+															 <li><a class="{{ Request::segment(2)=='products-and-services' ? 'active-links' : '' }}" href="{{ route('products-and-services.index') }}">Products & Services</a></li>
+															 <li><a class="{{ Request::segment(2)=='banner' ? 'active-links' : '' }}" href="{{ route('banner.index') }}">Banner</a></li>
+															 <li><a class="{{ Request::segment(2)=='portfolio' ? 'active-links' : '' }}" href="{{ route('portfolio.index') }}">Portfolio</a></li>
+															 <li><a class="{{ Request::segment(2)=='testimonial' ? 'active-links' : '' }}" href="{{ route('testimonial.index') }}">Testimonial</a></li>
+															 <li><a class="{{ Request::segment(2)=='hire' ? 'active-links' : '' }}" href="{{ route('hire.index') }}">Hire Section</a></li>
+															 <li><a class="{{ Request::segment(2)=='newsletter' ? 'active-links' : '' }}" href="{{ route('newsletter.index') }}">Newsletter</a></li>
+															 <li><a class="{{ Request::segment(2)=='footerlink' ? 'active-links' : '' }}" href="{{ route('footerlink.index') }}">Footer Links</a></li>
+															 <li><a class="{{ Request::segment(2)=='general' ? 'active-links' : '' }}" href="{{ route('general.index') }}">General</a></li>
+															 <li><a class="{{ Request::segment(2)=='submenus' ? 'active-links' : '' }}" href="{{ route('submenus.index') }}">Manage Menus</a></li>
 														</ul>
 												  </li>
                                     </ul>
@@ -184,8 +190,8 @@
                             </ul>
                         </nav>
                     </div><!-- sidebar-body -->
-                    <div class="navbar-user d-none d-md-flex" id="sidebarUser">
-                    </div>
+                    {{-- <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+                    </div> --}}
                 </nav>
             </div><!-- sidebar-body -->
         </nav>
