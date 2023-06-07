@@ -54,9 +54,9 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="form-group">
+								<div class="form-group col-12">
 									<label>Meta Description:</label>
-									<textarea id="oneditor" name="meta_description" class="form-control oneditor" rows="4">  {{$header->meta_description ?? ''}} </textarea>
+									<textarea  name="meta_description" class="form-control" rows="4">  {{$header->meta_description ?? ''}} </textarea>
 								</div>
 							</div>
 							<div class="row">

@@ -69,17 +69,17 @@
 								</div>
                     </div>
                     <!--/.sidebar header-->
-                    <div class="profile-element d-flex align-items-center flex-shrink-0">
-                        {{-- <div class="avatar online">
+                    {{-- <div class="profile-element d-flex align-items-center flex-shrink-0">
+                        <div class="avatar online">
                             <img src="{{ asset('dashassets/dist/img/avatar.png') }}" class="img-fluid rounded-circle"
                                 alt="">
-                        </div> --}}
+                        </div>
                         <div class="profile-text" style="width:100%;text-align: center;">
 									<h6 class="m-0">{{ auth()->user()->name }}</h6>
                            <span>{{ auth()->user()->email }}</span>
                            
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="sidebar-body">
                         <nav class="sidebar-nav">
                             <ul class="metismenu">
@@ -160,7 +160,7 @@
                                     </ul>
                                 </li>
 
-                                <li>
+                                {{-- <li>
                                     <a class="has-arrow material-ripple" href="#">
                                         <i class="typcn typcn-user-add-outline mr-2"></i>
                                         User Management
@@ -170,7 +170,7 @@
                                         <li><a href="{{ route('roles.index') }}">Roles</a></li>
                                         <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
 										  @endrole
                                 {{-- <li>
                                     <a class="has-arrow material-ripple" href="#">

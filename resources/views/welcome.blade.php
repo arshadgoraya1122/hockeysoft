@@ -13,7 +13,7 @@
 											<div class="col-lg-8 offset-lg-2 col-md-12">
 												<div class="caption">
 													<h1>{{$slider->title ?? ''}}</h1>
-													<p>{{$slider->description ?? ''}}</p>
+													<p>{!! $slider->description ?? '' !!}</p>
 
 												</div>
 											</div>
@@ -74,7 +74,7 @@
 								<i class="{{$item->icon ?? ''}}"></i>
 							</div>
 							<h3>{{$item->title ?? ''}}</h3>
-							<p>{{$item->description ?? ''}}</p>
+							<p>{!! $item->description ?? ''!!}</p>
 							<div class="services-btn-link">
 								<a href="https://cutesolution.com/html/techone/#" class="services-link">Read More</a>
 							</div>
@@ -91,7 +91,7 @@
 									<i class="{{$item->icon ?? ''}}"></i>
 								</div>
 								<h3>{{$item->title ?? ''}}</h3>
-								<p>{{$item->description ?? ''}}</p>
+								<p>{!! $item->description ?? ''!!}</p>
 								<div class="services-btn-link">
 									<a href="https://cutesolution.com/html/techone/#" class="services-link">Read More</a>
 								</div>
