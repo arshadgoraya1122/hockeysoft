@@ -64,20 +64,41 @@
                 </div>
             </div>
 			<div class="row">
+				@if(count($order) > 0)
+				@foreach($order as $sv)
 				@foreach ($s_item as $item)
-				<div class="col-lg-4 col-md-6">
-					<div class="single-services-item">
-						<div class="services-icon">
-							<i class="{{$item->icon ?? ''}}"></i>
-						</div>
-						<h3>{{$item->title ?? ''}}</h3>
-						<p>{{$item->description ?? ''}}</p>
-						<div class="services-btn-link">
-							<a href="https://cutesolution.com/html/techone/#" class="services-link">Read More</a>
+					@if($sv == $item->id)
+					<div class="col-lg-4 col-md-6">
+						<div class="single-services-item">
+							<div class="services-icon">
+								<i class="{{$item->icon ?? ''}}"></i>
+							</div>
+							<h3>{{$item->title ?? ''}}</h3>
+							<p>{{$item->description ?? ''}}</p>
+							<div class="services-btn-link">
+								<a href="https://cutesolution.com/html/techone/#" class="services-link">Read More</a>
+							</div>
 						</div>
 					</div>
-				</div>
+					@endif
 				@endforeach
+				@endforeach
+				@else
+					@foreach ($s_item as $item)
+						<div class="col-lg-4 col-md-6">
+							<div class="single-services-item">
+								<div class="services-icon">
+									<i class="{{$item->icon ?? ''}}"></i>
+								</div>
+								<h3>{{$item->title ?? ''}}</h3>
+								<p>{{$item->description ?? ''}}</p>
+								<div class="services-btn-link">
+									<a href="https://cutesolution.com/html/techone/#" class="services-link">Read More</a>
+								</div>
+							</div>
+						</div>
+					@endforeach
+				@endif
 			</div>
 		</div>
 	</section>

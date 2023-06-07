@@ -10,6 +10,7 @@ use App\Models\General;
 use App\Models\HireSection;
 use App\Models\Menu;
 use App\Models\Newsletter;
+use App\Models\Option;
 use App\Models\PortfolioHeading;
 use App\Models\PortfolioSection;
 use App\Models\ServiceHeading;
@@ -34,7 +35,9 @@ class FrontController extends Controller
 		$testimonial_h = TestimonialHeading::first();
 		$hire = HireSection::first();
 		$newsletter = Newsletter::first();
-		return view('welcome',compact('newsletter','hire','slider','about','s_heading','s_item','banner','portfolio','portfolio_h','testimonial','testimonial_h'));
+		$order = Option::where('option_key', 'service')->first();
+		$order =(isset($order->id))?json_decode($order->option_value,true):array();
+		return view('welcome',compact('order','newsletter','hire','slider','about','s_heading','s_item','banner','portfolio','portfolio_h','testimonial','testimonial_h'));
 	}
 
 	public function servics()

@@ -111,16 +111,16 @@
                                     </ul>
                                 </li> --}}
                                 <li class="{{ Request::segment(2)=='header' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='about-us' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='products-and-services' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='banner' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='portfolio' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='testimonial' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='hire' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='newsletter' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='footerlink' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='general' ? 'mm-active' : '' }} ||
-										  {{ Request::segment(2)=='submenus' ? 'mm-active' : '' }}
+												{{ Request::segment(2)=='about-us' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='products-and-services' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='banner' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='portfolio' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='testimonial' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='hire' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='newsletter' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='footerlink' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='general' ? 'mm-active' : '' }} ||
+												{{ Request::segment(2)=='submenus' ? 'mm-active' : '' }}
 										  ">
                                     <a class="has-arrow material-ripple" href="#">
                                         <i class="typcn typcn-pencil mr-2"></i>
@@ -128,16 +128,16 @@
                                     </a>
                                     <ul class="nav-second-level">
 													<li class="{{ Request::segment(2)=='header' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='about-us' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='products-and-services' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='banner' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='portfolio' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='testimonial' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='hire' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='newsletter' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='footerlink' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='general' ? 'mm-active' : '' }} ||
-													{{ Request::segment(2)=='submenus' ? 'mm-active' : '' }}
+														{{ Request::segment(2)=='about-us' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='products-and-services' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='banner' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='portfolio' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='testimonial' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='hire' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='newsletter' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='footerlink' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='general' ? 'mm-active' : '' }} ||
+														{{ Request::segment(2)=='submenus' ? 'mm-active' : '' }}
 													">
 														<a class="has-arrow material-ripple" href="#">
 															 <i class="typcn typcn-pencil mr-2"></i>

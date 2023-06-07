@@ -29,11 +29,17 @@ class ServiceItemController extends Controller
     public function index()
     {	
 		
-        $item = ServiceItem::latest()->paginate(6);
+        $item = ServiceItem::latest()->paginate(30);
+		  $order = array();
+		  foreach ($item as $key => $v) {
+				$order[] = $v->id;
+		  }
+		  
+
 		  $order = Option::where('option_key', 'service')->first();
         $order =(isset($order->id))?json_decode($order->option_value,true):array();
         return view('admin.service-items.index',compact('item','order'))
-            ->with('i', (request()->input('page', 1) - 1) * 6);
+            ->with('i', (request()->input('page', 1) - 1) * 30);
     }
     
     /**
@@ -136,13 +142,7 @@ class ServiceItemController extends Controller
 		public function sort(Request $request)
 		{
 			$order = $request->input('order');
-			// dd($order);
-			// foreach ($order as $index => $itemId) {
-			// 		$item = Option::find($itemId);
-			// 		$item->option_value = $index + 1;
-			// 		$item->save();
-			// }
-
+		
 			$sideBar=Option::updateOrCreate(
 				['option_key' => 'service'],
 				[
